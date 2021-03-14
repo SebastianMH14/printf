@@ -16,4 +16,7 @@ char *m;
 void (*f)();
 } mod;
 
-#endif
+int _printf(const char *format, ...);
+int _strlen(char *s);
+
+#endif/*HOLBERTON_H*/
