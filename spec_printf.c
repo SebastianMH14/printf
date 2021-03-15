@@ -1,16 +1,15 @@
 #include "holberton.h"
 
 /**
- *_strings - 
- *@s:
- *Return:
+ *_strings - send string to the buffer
+ *@s: specifecers of a string
+ *
+ *Return: the string to buffer
  */
-char *_strings(va_list s, char len)
+char *_strings(va_list s)
 {
 	char *z;
-	int i;
 
 	z = va_arg(s, char *);
-	len += _strlen(z);
 	return (z);
 }

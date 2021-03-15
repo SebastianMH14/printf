@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  *_strlen - Tells the length or size of a string
  *@s: varible to test the string
@@ -17,5 +16,3 @@ int _strlen(char *s)
 	}
 	return (lon);
 }
-
-

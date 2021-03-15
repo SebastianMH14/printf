@@ -3,7 +3,6 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-
 /**
  * struct modiferes - Struct var
  *
@@ -13,11 +12,10 @@
 typedef struct modiferes
 {
 char *m;
-char *(*f)(va_list, char);
+char *(*f)(va_list);
 } mod;
-
 int _printf(char *format, ...);
 int _strlen(char *s);
-char *_strings(va_list s, char len);
+char *_strings(va_list s);
 
 #endif/*HOLBERTON_H*/
