@@ -14,7 +14,8 @@ char *Create_buff(va_list ag, const char *format, char *buff)
 	mod modif[] = {
 		{"s", _strings},
 		{"c", _char},
-	/*	{"d", int_d},*/
+		{"d", int_d},
+		{"i", int_d},
 		{NULL, NULL}
 	};
 	int i, j, m, k = 0;
@@ -37,10 +38,9 @@ char *Create_buff(va_list ag, const char *format, char *buff)
 					{
 					a = modif[j].f(ag);
 					i++;
-					for (m = 0; a[m] != '\0'; m++)
+					for (m = 0; a[m] != '\0'; m++, k++)
 					{
 						buff[k] = a[m];
-						k++;
 					}
 					}
 				}

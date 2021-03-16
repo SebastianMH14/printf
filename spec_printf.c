@@ -30,3 +30,20 @@ char *_char(va_list c)
 	str = strfromchar(a, ch);
 	return (str);
 }
+/**
+ *int_d - send int to the buffer
+ *@d: specifecers of a integer
+ *
+ *Return: the integer to the buffer
+ */
+char *int_d(va_list d)
+{
+	int a;
+	char str[1024];
+	char *pass;
+
+	a = va_arg(d, int);
+	_itoa(a, str);
+	pass = str;
+	return (pass);
+}

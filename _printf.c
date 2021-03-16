@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * _printf - function that produces output according to a format
  * @format: string to specify the the arguments
@@ -10,6 +11,10 @@ int _printf(const char *format, ...)
 	char *buffer;
 	va_list ag;
 
+	if (format == NULL)
+	{
+		return (0);
+	}
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 	{
