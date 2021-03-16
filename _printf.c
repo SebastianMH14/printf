@@ -1,16 +1,14 @@
 #include "holberton.h"
-
 /**
  * _printf - function that produces output according to a format
  * @format: string to specify the format
- *
  * Return: the number of characters printed
  */
 int _printf(char *format, ...)
 {
 	mod modif[] = {
 		{"s", _strings},
-		{"c", NULL},
+		{"c", _char},
 		{"%", NULL},
 		{NULL, NULL}
 	};
@@ -24,17 +22,24 @@ int _printf(char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			i++;
-			for (j = 0; modif[j].m != NULL; j++)
+			if (format[i + 1] == '%')
 			{
-				if (format[i] == modif[j].m[0])
+				i++;
+			}
+			else
+			{
+				i++;
+				for (j = 0; modif[j].m != NULL; j++)
 				{
-					a = modif[j].f(ag);
-					i++;
-					for (m = 0; a[m] != '\0'; m++)
+					if (format[i] == modif[j].m[0])
 					{
-						buffer[k] = a[m];
-						k++;
+						a = modif[j].f(ag);
+						i++;
+						for (m = 0; a[m] != '\0'; m++)
+						{
+							buffer[k] = a[m];
+							k++;
+						}
 					}
 				}
 			}

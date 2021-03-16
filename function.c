@@ -16,3 +16,10 @@ int _strlen(char *s)
 	}
 	return (lon);
 }
+
+char *strfromchar(char destination[], char source)
+{
+	destination[0] = source;
+	destination[1] = '\0';
+	return (destination);
+}

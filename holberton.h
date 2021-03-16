@@ -14,8 +14,15 @@ typedef struct modiferes
 char *m;
 char *(*f)(va_list);
 } mod;
+
 int _printf(char *format, ...);
+
+/* prototipos para funciones */
 int _strlen(char *s);
+char *strfromchar(char destination[], char source);
+
+/* prototipos para especificadores */
 char *_strings(va_list s);
+char *_char(va_list c);
 
 #endif/*HOLBERTON_H*/

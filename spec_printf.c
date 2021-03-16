@@ -13,3 +13,27 @@ char *_strings(va_list s)
 	z = va_arg(s, char *);
 	return (z);
 }
+
+/**
+ * charc - send charc to the buffer
+ *@c: specifecers of a character
+ *
+ *Return: the character to the buffer
+ */
+char *_char(va_list c)
+{
+	char ch;
+	char a[2];
+	char *str;
+
+	ch = va_arg(c, int);
+	str = strfromchar(a, ch);
+	return (str);
+}
+
+/**
+ * 
+ * 
+ * 
+ */
+
