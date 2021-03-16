@@ -15,7 +15,8 @@ char *m;
 char *(*f)(va_list);
 } mod;
 
-int _printf(char *format, ...);
+int _printf(const char *format, ...);
+char *Create_buff(va_list ag, const char *format, char *buff);
 
 /* prototipos para funciones */
 int _strlen(char *s);

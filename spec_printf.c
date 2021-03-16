@@ -15,7 +15,7 @@ char *_strings(va_list s)
 }
 
 /**
- * charc - send charc to the buffer
+ *_char - send char to the buffer
  *@c: specifecers of a character
  *
  *Return: the character to the buffer
@@ -30,10 +30,3 @@ char *_char(va_list c)
 	str = strfromchar(a, ch);
 	return (str);
 }
-
-/**
- * 
- * 
- * 
- */
-

@@ -17,6 +17,13 @@ int _strlen(char *s)
 	return (lon);
 }
 
+/**
+ *strfromchar - coverts a char into a string
+ *@destination: string where the char is going to
+ *@source: char to be converted
+ *
+ *Return: a string with the char.
+ */
 char *strfromchar(char destination[], char source)
 {
 	destination[0] = source;
