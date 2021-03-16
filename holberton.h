@@ -25,8 +25,8 @@ char *strfromchar(char destination[], char source);
 
 /* prototipos para function itoa */
 void _itoa(int n, char *s);
-static char *sput_u(unsigned int n, char *s);
-static char *sput_up1(unsigned intn, char *s);
+char *sput_u(unsigned int n, char *s);
+char *sput_up1(unsigned int n, char *s);
 
 /* prototipos para especificadores */
 char *_strings(va_list s);

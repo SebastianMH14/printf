@@ -24,7 +24,7 @@ void _itoa(int n, char *s)
  *
  *Return: int into a string without null
  */
-static char *sput_u(unsigned int n, char *s)
+char *sput_u(unsigned int n, char *s)
 {
 	unsigned int digit, tenth;
 
@@ -44,7 +44,7 @@ static char *sput_u(unsigned int n, char *s)
  *
  *Return: int into a string without null
  */
-static char *sput_up1(unsigned int n, char *s)
+char *sput_up1(unsigned int n, char *s)
 {
 	unsigned int digit, tenth;
 
