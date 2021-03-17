@@ -14,7 +14,6 @@ char *Create_buff(va_list ag, const char *format, char *buff)
 	mod modif[] = {
 		{"s", _strings},
 		{"c", _char},
-		{"%", _per},
 		{"d", int_d},
 		{"i", int_d},
 		{NULL, NULL}
@@ -26,13 +25,16 @@ char *Create_buff(va_list ag, const char *format, char *buff)
 	{
 		if (format[i] == '%')
 		{
-			i++;
-			for (j = 0; modif[j].m != NULL; j++)
-			{
-				if (format[i] == modif[j].m[0])
+			if (format[i + 1] == '%')
+				i++;
+			else
+				i++;
+				for (j = 0; modif[j].m != NULL; j++)
 				{
+					if (format[i] == modif[j].m[0])
+					{
 					a = modif[j].f(ag);
-					if(a == NULL)
+					if (a == NULL)
 					{
 						return (NULL);
 					}
@@ -41,10 +43,10 @@ char *Create_buff(va_list ag, const char *format, char *buff)
 					{
 						buff[k] = a[m];
 					}
+					}
 				}
-			}
 		}
-	buff[k] = format[i];
+		buff[k] = format[i];
 	}
 	buff[k] = '\0';
 	return (buff);

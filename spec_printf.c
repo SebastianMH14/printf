@@ -59,15 +59,3 @@ char *int_d(va_list d)
 	}
 	return (pass);
 }
-/**
- *per - send a percentege to the buffer
- *@sp: specifecers of a integer
- *
- *Return: the integer to the buffer
- */
-char *_per(__attribute__((unused))va_list pe)
-{
-	char *str = "%";
-
-	return(str);
-}
