@@ -37,6 +37,10 @@ char *Create_buff(va_list ag, const char *format, char *buff)
 					if (format[i] == modif[j].m[0])
 					{
 					a = modif[j].f(ag);
+					if(a == NULL)
+					{
+						return (NULL);
+					}
 					i++;
 					for (m = 0; a[m] != '\0'; m++, k++)
 					{

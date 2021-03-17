@@ -27,8 +27,12 @@ char *_char(va_list c)
 	char *str;
 
 	ch = va_arg(c, int);
+	if (ch == '\0')
+	{
+		return (NULL);
+	}
 	str = strfromchar(a, ch);
-	return (str);
+	return (NULL);
 }
 /**
  *int_d - send int to the buffer

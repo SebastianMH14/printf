@@ -11,9 +11,9 @@ int _printf(const char *format, ...)
 	char *buffer;
 	va_list ag;
 
-	if (format == NULL)
+	if (format == NULL || format == "")
 	{
-		return (0);
+		return (-1);
 	}
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
@@ -22,6 +22,10 @@ int _printf(const char *format, ...)
 	}
 	va_start(ag, format);
 	buffer = Create_buff(ag, format, buffer);
+	if (buffer == NULL)
+	{
+		return (-1);
+	}
 	write(1, buffer, _strlen(buffer));
 	b = _strlen(buffer);
 	va_end(ag);

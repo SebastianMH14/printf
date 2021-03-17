@@ -1,0 +1,29 @@
+.\" Manpage for _printf.
+.TH _PRINTF 3  "16 March 2021"
+.SH NAME
+_printf - formatted output conversion
+.SH SYNOPSIS
+.B #include \/"holberton.h"
+
+int _printf(const char *format, ...);
+.SH DESCRIPTION
+the  _printf() function prints the standard output dependet of the format received.
+.br
+.br
+.SH RETURN
+This function returns the length string of the number of characters printed
+.SH SPECIFIERS
+.B %c
+This specifier takes care of printing characters.
+.br
+.B %s
+This specifier takes care of printing strings.
+.br
+.B %i, d
+These specifiers take care of printing whole numbers.
+.SH SEE ALSO
+Referencia a documentos afines, incluyendo otras páginas del manual.
+.SH BUGS
+Detalles sorprendentes (no siempre tienen que ser problemas)
+.SH AUTHOR
+Juan Felipe Prado Cruz and Sebastian Molina Henao
