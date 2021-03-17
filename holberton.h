@@ -32,5 +32,6 @@ char *sput_up1(unsigned int n, char *s);
 char *_strings(va_list s);
 char *_char(va_list c);
 char *int_d(va_list d);
+char *_per(va_list pe);
 
 #endif/*HOLBERTON_H*/

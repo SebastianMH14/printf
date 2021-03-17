@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 	{
-		return (0);
+		return (-1);
 	}
 	va_start(ag, format);
 	buffer = Create_buff(ag, format, buffer);

@@ -11,6 +11,10 @@ char *_strings(va_list s)
 	char *z;
 
 	z = va_arg(s, char *);
+	if (z == NULL)
+	{
+		return (NULL);
+	}
 	return (z);
 }
 
@@ -27,11 +31,11 @@ char *_char(va_list c)
 	char *str;
 
 	ch = va_arg(c, int);
-	if (ch == '\0')
+	str = strfromchar(a, ch);
+	if (str == NULL)
 	{
 		return (NULL);
 	}
-	str = strfromchar(a, ch);
 	return (str);
 }
 /**
@@ -49,5 +53,21 @@ char *int_d(va_list d)
 	a = va_arg(d, int);
 	_itoa(a, str);
 	pass = str;
+	if (pass == NULL)
+	{
+		return (NULL);
+	}
 	return (pass);
+}
+/**
+ *per - send a percentege to the buffer
+ *@sp: specifecers of a integer
+ *
+ *Return: the integer to the buffer
+ */
+char *_per(__attribute__((unused))va_list pe)
+{
+	char *str = "%";
+
+	return(str);
 }
