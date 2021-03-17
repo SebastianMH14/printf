@@ -3,7 +3,7 @@
 
 
 ## _printf()
-#####The function prints the standard output dependet of the format received.
+<p>The function prints the standard output dependet of the format received.</p>
 int _printf(const char *format, ...)
 
 ## How to use _printf
@@ -21,11 +21,11 @@ int _printf(const char *format, ...)
 
  ### Example of use
   >#include <stdio.h>
-int main()
-{
-    printf ("Hello World! \ n");
-    return (0);
-}
+   > int main()
+    >{
+    >printf ("Hello World! \ n");
+    >return (0);
+    >}
 ## Output
     Hello World!
 
