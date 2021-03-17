@@ -9,26 +9,37 @@ int _printf(const char *format, ...)
 ## How to use _printf
   * You must be in an ubuntu / linux environment
   * You must clone the repository
- >git clone https://github.com/SebastianMH14/printf.git
-* Now you can call the function using _printf ("")
+ ```
+ git clone https://github.com/SebastianMH14/printf.git
+```
+* Now you can call the function using _printf (" ", arguments);
+* Format Specifications that we maneged.
     - Use %s to print string
     - Use %c to print character
     - Use %d or %i to print integer
 
-###  Man Page 
+###  Man Page
   * To see the man page use :
- > man ./man_3_printf 
+ ```
+ man ./man_3_printf
+ ```
 
- ### Example of use
-  >#include <stdio.h>
-   > int main()
-    >{
-    >printf ("Hello World! \ n");
-    >return (0);
-    >}
+ ## Example of use
+ ```
+  #include <stdio.h>
+    int main()
+      {
+      printf ("Hello World! \ n");
+      return (0);
+      }
+```
 ## Output
     Hello World!
 
- #### Authors
+## Flowchar
+To visualize the flowchar click [here](https://drive.google.com/file/d/1AnT9kYtYx3deoX32TGEtNFdfkdYnZ2BM/view?usp=sharing).
+
+ ### Authors
  Juan Felipe Prado Cruz @Jfprado11
+
  Sebastian Molina Henao @SebastianMH14
