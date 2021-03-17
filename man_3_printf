@@ -22,8 +22,8 @@ This specifier takes care of printing strings.
 .B %i, d
 These specifiers take care of printing whole numbers.
 .SH SEE ALSO
-Referencia a documentos afines, incluyendo otras páginas del manual.
+...
 .SH BUGS
-Detalles sorprendentes (no siempre tienen que ser problemas)
+...
 .SH AUTHOR
 Juan Felipe Prado Cruz and Sebastian Molina Henao
