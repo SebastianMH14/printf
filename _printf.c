@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	char *buffer;
 	va_list ag;
 
-	if (format == NULL || format == "")
+	if (format == NULL)
 	{
 		return (-1);
 	}

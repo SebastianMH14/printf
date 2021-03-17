@@ -32,7 +32,7 @@ char *_char(va_list c)
 		return (NULL);
 	}
 	str = strfromchar(a, ch);
-	return (NULL);
+	return (str);
 }
 /**
  *int_d - send int to the buffer
