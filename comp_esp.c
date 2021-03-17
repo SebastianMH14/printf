@@ -28,17 +28,16 @@ char *Create_buff(va_list ag, const char *format, char *buff)
 			if (format[i + 1] == '%')
 				i++;
 			else
-				i++;
 				for (j = 0; modif[j].m != NULL; j++)
 				{
-					if (format[i] == modif[j].m[0])
+					if (format[i + 1] == modif[j].m[0])
 					{
 					a = modif[j].f(ag);
 					if (a == NULL)
 					{
 						return (NULL);
 					}
-					i++;
+					i += 2;
 					for (m = 0; a[m] != '\0'; m++, k++)
 					{
 						buff[k] = a[m];
