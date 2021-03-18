@@ -27,6 +27,10 @@ char *Create_buff(va_list ag, const char *format, char *buff)
 		{
 			if (format[i + 1] == '%')
 				i++;
+			if (format[i + 1] == '\0')
+			{
+				return (NULL);
+			}
 			else
 				for (j = 0; modif[j].m != NULL; j++)
 				{
@@ -39,9 +43,7 @@ char *Create_buff(va_list ag, const char *format, char *buff)
 					}
 					i += 2;
 					for (m = 0; a[m] != '\0'; m++, k++)
-					{
 						buff[k] = a[m];
-					}
 					}
 				}
 		}

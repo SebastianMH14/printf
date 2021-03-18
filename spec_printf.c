@@ -13,7 +13,8 @@ char *_strings(va_list s)
 	z = va_arg(s, char *);
 	if (z == NULL)
 	{
-		return (NULL);
+		z = "(null)";
+		return (z);
 	}
 	return (z);
 }
